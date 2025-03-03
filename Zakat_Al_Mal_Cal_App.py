@@ -5,8 +5,10 @@ from PIL import Image
 st.title("Zakat Al_Mal Calculation App")
 
 
-image= Image.open('./Zakat_Pct.webp')
-st.image(image,width=555)
+image1= Image.open('./Zakat_Pct.webp')
+st.image(image1,width=555)
+image2= Image.open('./Zakat_vers.jpg')
+st.sidebar.image(image2)
 # Input Data:
 st.write("### Input Data:")
 
