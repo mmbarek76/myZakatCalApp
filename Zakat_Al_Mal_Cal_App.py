@@ -2,12 +2,12 @@ import streamlit as st
 from PIL import Image
 
 
-st.title("Zakat Al_Mal Calculation App")
+st.title("Zakat Al_Mal Calculation")
 
 
 image1= Image.open('./Zakat_Pct.webp')
 st.image(image1,width=555)
-image2= Image.open('./Zakat_vers.jpg')
+image2= Image.open('./Zakat_verse.jpg')
 st.sidebar.image(image2)
 # Input Data:
 st.write("### Input Data:")
