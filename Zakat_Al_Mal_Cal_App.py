@@ -1,9 +1,12 @@
 import streamlit as st
+from PIL import Image
 
 
 st.title("Zakat Al_Mal Calculation App")
 
-st.image('C:/Users/mouns/Desktop/Zakat_Pct.webp',width=555)
+
+image= Image.open('./Zakat_Pct.webp')
+st.image(image,width=555)
 # Input Data:
 st.write("### Input Data:")
 
