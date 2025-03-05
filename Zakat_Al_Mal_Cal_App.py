@@ -12,18 +12,24 @@ st.sidebar.image(image2)
 # Input Data:
 st.write("### Input Data:")
 
+st.markdown('''
+            The ***Nisabe*** is the value of 87.48 grams of gold or 612.36 grams of silver. 
+            It is the minimum amount of wealth one must have before they are liable to pay zakah.  
+            As of 03/01/2025, Nisabe of 87.48 * $87(22K) is: ***7610.76***
+            ''')
+
 col1, col2 = st.columns(2)
 
 col1.write("Please, enter your total cash(Bank balance):")
-cashAmt_input = col1.number_input("Total Cash",min_value=0)
+cashAmt_input = col1.number_input("**Total Cash**",min_value=0)
 col1.write("Please, enter your gross 401K:")
-retirmentAmt_input = col1.number_input("Total 401K",min_value=0)
+retirmentAmt_input = col1.number_input("**Total 401K**",min_value=0)
 filing_status = col1.selectbox(
-    "# Please choose your filing status",
+    "# Please choose your **filing status**",
     ("single", "married_jointly", "head_of_household"),
 )
 col1.write("Please, enter your total expenses:")
-expensesAmt_input =  col1.number_input("Total Expenses",min_value=0)
+expensesAmt_input =  col1.number_input("**Total Expenses**",min_value=0)
 
 # Calculate Net 401K(# Gross 401k - FedTax - State Tax - 10% penality)
 #**********************************
@@ -133,4 +139,4 @@ zakatAmt_Due=calculateZakat(cashAmt_input,expensesAmt_input)
 
 # Output
 #st.metric(label="Zakat Amount to be paid:", value=zakatAmt_tobepaid)
-col1.success(f"Zakat Amount Due: {zakatAmt_Due}")
+col1.success(f"**Zakat Amount Due**: {zakatAmt_Due}")
